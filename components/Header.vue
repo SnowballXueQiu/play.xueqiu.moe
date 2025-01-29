@@ -4,7 +4,7 @@
       <n-space :align="'center'" class="logo-title" @click="router.push('/')">
         <n-avatar
           :round="false"
-          size="medium"
+          :size="40"
           src="/avatar.jpeg"
           :bordered="false"
           class="logo"
@@ -12,6 +12,9 @@
         <n-text class="site-title">雪球游戏集</n-text>
       </n-space>
       <n-space :align="'center'" :size="24">
+        <n-button text>
+          <a href="https://blog.qwq.my" target="_blank" class="nav-link">Blog</a>
+        </n-button>
         <n-button text>
           <a href="https://github.com/SnowballXueQiu/play.xueqiu.moe" target="_blank" class="nav-link">
             <n-icon size="24" class="github-icon">
