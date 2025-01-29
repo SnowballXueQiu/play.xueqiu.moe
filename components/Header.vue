@@ -42,16 +42,27 @@ const router = useRouter()
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
   display: flex;
   align-items: center;
+  height: 64px;
 }
+
 .header-content {
   height: 100%;
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
+
 .site-title {
   font-size: 1.2rem;
   font-weight: bold;
-  line-height: 40px;
 }
+
+.site-domain {
+  font-size: 0.8rem;
+  color: #999;
+}
+
 .logo {
   border-radius: 8px;
 }
