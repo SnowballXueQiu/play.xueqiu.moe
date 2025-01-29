@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@tabler/icons-vue':
+        specifier: ^3.29.0
+        version: 3.29.0(vue@3.5.13(typescript@5.7.3))
       nuxt:
         specifier: ^3.15.4
         version: 3.15.4(@parcel/watcher@2.5.1)(@types/node@22.12.0)(db0@0.2.3)(ioredis@5.4.2)(magicast@0.3.5)(rollup@4.32.1)(terser@5.37.0)(typescript@5.7.3)(vite@6.0.11(@types/node@22.12.0)(jiti@2.4.2)(terser@5.37.0)(yaml@2.7.0))(yaml@2.7.0)
@@ -750,6 +753,14 @@ packages:
   '@sindresorhus/merge-streams@2.3.0':
     resolution: {integrity: sha512-LtoMMhxAlorcGhmFYI+LhPgbPZCkgP6ra1YL604EeF6U98pLlQ3iWIGMdWSC+vWmPBWBNgmDBAhnAobLROJmwg==}
     engines: {node: '>=18'}
+
+  '@tabler/icons-vue@3.29.0':
+    resolution: {integrity: sha512-W4ErqWC+OsWudD7NegB8k8uAbTZv7y35jOfRJ2Rjh81/WxktAHEz2fwL8BZL+XDU7zisDSFnmjfPXjizGV1NpA==}
+    peerDependencies:
+      vue: '>=3.0.1'
+
+  '@tabler/icons@3.29.0':
+    resolution: {integrity: sha512-VWNINymdmhay3MDvWVREmRwuWLSrX3YiInKvs5L4AHRF4bAfJabLlEReE0BW/XFsBt22ff8/C8Eam/LXlF97mA==}
 
   '@trysound/sax@0.2.0':
     resolution: {integrity: sha512-L7z9BgrNEcYyUYtF+HaEfiS5ebkh9jXqbszz7pC0hRBPaatV0XjSD3+eHrpqFemQfgwiFF0QPIarnIihIDn7OA==}
@@ -3850,6 +3861,13 @@ snapshots:
     optional: true
 
   '@sindresorhus/merge-streams@2.3.0': {}
+
+  '@tabler/icons-vue@3.29.0(vue@3.5.13(typescript@5.7.3))':
+    dependencies:
+      '@tabler/icons': 3.29.0
+      vue: 3.5.13(typescript@5.7.3)
+
+  '@tabler/icons@3.29.0': {}
 
   '@trysound/sax@0.2.0': {}
 

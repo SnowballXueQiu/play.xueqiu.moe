@@ -9,7 +9,10 @@
           :bordered="false"
           class="logo"
         />
-        <n-text class="site-title">雪球游戏集</n-text>
+        <n-space :align="'center'" :size="8">
+          <n-text class="site-title">雪球游戏集</n-text>
+          <n-text class="site-domain">play.xueqiu.moe</n-text>
+        </n-space>
       </n-space>
       <n-space :align="'center'" :size="24">
         <n-button text>
@@ -17,9 +20,7 @@
         </n-button>
         <n-button text>
           <a href="https://github.com/SnowballXueQiu/play.xueqiu.moe" target="_blank" class="nav-link">
-            <n-icon size="24" class="github-icon">
-              <img src="/github.svg" width="24" height="24" alt="GitHub" />
-            </n-icon>
+            <icon-brand-github class="github-icon" />
           </a>
         </n-button>
       </n-space>
@@ -29,6 +30,7 @@
 
 <script setup lang="ts">
 import { NLayoutHeader, NSpace, NAvatar, NText, NButton, NIcon } from 'naive-ui'
+import { IconBrandGithub } from '@tabler/icons-vue'
 import { useRouter } from 'nuxt/app'
 
 const router = useRouter()
@@ -63,5 +65,7 @@ const router = useRouter()
 }
 .github-icon {
   color: #000;
+  width: 24px;
+  height: 24px;
 }
 </style>

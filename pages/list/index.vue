@@ -2,54 +2,36 @@
   <div>
     <Header />
     <n-layout-content class="content">
-      <n-card>
-        <n-h2>游戏列表</n-h2>
-        <n-list>
-          <n-list-item v-for="game in games" :key="game.id">
-            <n-thing>
-              <template #header>
-                {{ game.title }}
-              </template>
-              <template #description>
-                {{ game.description }}
-              </template>
-            </n-thing>
-            <template #suffix>
-              <n-button @click="router.push(`/game/${game.id}`)">
+      <n-grid :cols="3" :x-gap="24" :y-gap="24">
+        <n-grid-item v-for="game in games" :key="game.id">
+          <n-card class="game-card" hoverable>
+            <n-space vertical>
+              <div class="game-header">
+                <n-text class="game-title">{{ game.title }}</n-text>
+                <n-space class="game-heat">
+                  <icon-flame-filled v-for="i in game.heat" :key="i" class="heat-active" />
+                  <icon-flame v-for="i in 5 - game.heat" :key="i + game.heat" class="heat-inactive" />
+                </n-space>
+              </div>
+              <n-text depth="3" class="game-description">{{ game.description }}</n-text>
+              <n-button type="primary" block @click="router.push(`/game/${game.id}`)">
                 开始游戏
               </n-button>
-            </template>
-          </n-list-item>
-        </n-list>
-      </n-card>
+            </n-space>
+          </n-card>
+        </n-grid-item>
+      </n-grid>
     </n-layout-content>
   </div>
 </template>
 
 <script setup lang="ts">
-import { NLayoutContent, NCard, NH2, NList, NListItem, NThing, NButton } from 'naive-ui'
+import { NLayoutContent, NCard, NSpace, NText, NButton, NGrid, NGridItem } from 'naive-ui'
+import { IconFlame, IconFlameFilled } from '@tabler/icons-vue'
 import { useRouter } from 'nuxt/app'
+import { games } from './games'
 
 const router = useRouter()
-
-// 示例游戏数据
-const games = [
-  {
-    id: '1',
-    title: '2048',
-    description: '经典数字益智游戏'
-  },
-  {
-    id: '2',
-    title: '贪吃蛇',
-    description: '永不过时的休闲游戏'
-  },
-  {
-    id: '3',
-    title: '俄罗斯方块',
-    description: '考验反应能力的方块游戏'
-  }
-]
 </script>
 
 <style scoped>
@@ -57,5 +39,35 @@ const games = [
   padding: 40px;
   min-height: calc(100vh - 64px);
   background: #f5f5f5;
+}
+.game-card {
+  transition: all 0.3s ease;
+}
+.game-card:hover {
+  transform: translateY(-4px);
+}
+.game-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+.game-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.game-description {
+  margin-bottom: 16px;
+  color: #666;
+}
+.heat-active {
+  color: #ff9f43;
+  width: 20px;
+  height: 20px;
+}
+.heat-inactive {
+  color: #ccc;
+  width: 20px;
+  height: 20px;
 }
 </style>
