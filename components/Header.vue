@@ -11,7 +11,7 @@
         />
         <n-space :align="'center'" :size="8">
           <n-text class="site-title">雪球游戏集</n-text>
-          <n-text class="site-domain">play.xueqiu.moe</n-text>
+          <n-text class="site-domain shine-text">play.xueqiu.moe</n-text>
         </n-space>
       </n-space>
       <n-space :align="'center'" :size="24">
@@ -78,5 +78,25 @@ const router = useRouter()
   color: #000;
   width: 24px;
   height: 24px;
+}
+
+.shine-text {
+  background: #656565 linear-gradient(to left, transparent, #fff, transparent) no-repeat 0 0;
+  background-size: 20% 100%;
+  background-position: 0 0;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: shine 2s infinite;
+}
+
+@keyframes shine {
+  from {
+    background-position: 0% 0%;
+  }
+
+  to {
+    background-position: 100% 100%;
+  }
 }
 </style>
