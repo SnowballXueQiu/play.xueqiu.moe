@@ -12,12 +12,14 @@
         </n-space>
       </n-card>
     </n-layout-content>
+    <InfoCircle />
   </div>
 </template>
 
 <script setup lang="ts">
 import { NLayoutContent, NCard, NSpace, NH1, NP, NButton } from 'naive-ui'
 import { useRouter } from 'nuxt/app'
+import InfoCircle from '~/components/InfoCircle.vue'
 
 const router = useRouter()
 </script>

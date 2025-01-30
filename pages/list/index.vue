@@ -24,6 +24,7 @@
         </n-card>
       </n-space>
     </n-layout-content>
+    <InfoCircle />
   </div>
 </template>
 
@@ -32,6 +33,7 @@ import { NLayoutContent, NCard, NSpace, NText, NButton, NGrid, NGridItem } from 
 import { IconFlame, IconFlameFilled } from '@tabler/icons-vue'
 import { useRouter } from 'nuxt/app'
 import { games } from './games'
+import InfoCircle from '~/components/InfoCircle.vue';
 
 const router = useRouter()
 </script>
