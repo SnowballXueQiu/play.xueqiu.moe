@@ -4,7 +4,7 @@
     <n-layout-content class="content">
       <n-space vertical :size="24">
         <n-card v-for="game in games" 
-          :key="game.id" 
+          :key="game.label" 
           class="game-card" 
           hoverable
         >
@@ -17,7 +17,7 @@
               </n-space>
             </div>
             <n-text depth="3" class="game-description">{{ game.description }}</n-text>
-            <n-button type="primary" block @click="router.push(`/game/${game.id}`)">
+            <n-button type="primary" block @click="router.push(`/games/${game.label}`)">
               开始游戏
             </n-button>
           </n-space>
