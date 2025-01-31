@@ -36,11 +36,5 @@ body {
   display: grid;
   place-items: center;
   font-family: system-ui;
-  color: hsl(0 0% 100%);
-  background: hsl(228 7% 12%)
-    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" fill="hsl(228 7% 15%)" width="50" height="50">\
-      <rect width="25" height="25" />\
-      <rect x="25" y="25" width="25" height="25" />\
-  </svg>');
 }
 </style>
