@@ -17,5 +17,11 @@ export const games: Game[] = [
     title: '堆方块',
     description: '看看谁能堆得更高',
     heat: 4
+  },
+  {
+    label: 'ping-pong-game',
+    title: '乒乓球',
+    description: '你真的打不过它',
+    heat: 4
   }
 ]
