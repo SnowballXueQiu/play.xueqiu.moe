@@ -7,6 +7,7 @@
       <IconHeart v-for="n in (3 - lives)" :key="'empty-' + n" />
     </div>
     <canvas id="game"></canvas>
+    <div class="note">NOTE: 手机版用户可以通过点击屏幕改变滑块位置</div>
   </div>
 </template>
 
@@ -38,5 +39,13 @@ canvas {
   color: white;
   font-size: 24px;
   text-align: center;
+}
+.note {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 14px;
 }
 </style>
